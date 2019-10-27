@@ -6,4 +6,17 @@ def display_board(board)
   puts " #{board[6]} | #{board[7]} | #{board[8]} "
 end
 
-# code your input_to_index and move method here!
+#change input from string to int
+def input_to_index(input)
+  return input.to_i - 1
+end
+
+#process player move
+def move(board, index, x_o = 'X')
+  update_array_at_with(board, index, x_o)
+end
+
+#update game board from player input
+def update_array_at_with(array, index, value)
+  array[index] = value
+end
